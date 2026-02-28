@@ -13,10 +13,22 @@ def get_winner(player, computer):
         return "player"
     else:
         return "computer"
+   
+def playagain(player_name):
+            print("Would you like to play another game?")
+            decision = input("Type y or n: ").lower()
+            if decision == "y":
+                play_game()
+            elif decision == "n":
+                print(f"Come again sometime, {player_name}!")
+            else:
+                print("Invalid decision.")
+                decision = input("Type y or n: ").lower()
 
 def play_game():
     player_score = 0
     computer_score = 0
+    rounds = 0
 
     player_name = input("Enter your name: ")
 
@@ -44,9 +56,27 @@ def play_game():
             print("It's a tie!")
         elif result == "player":
             player_score += 1
+            rounds +=1
             print(f"You win this round! Score - You: {player_score} | Computer: {computer_score}")
         else:
             computer_score += 1
+            rounds +=1
             print(f"Computer wins this round! Score - You: {player_score} | Computer: {computer_score}")
+            
+
+        if player_score == 6:
+            print(f"You are the winner, {player_name}!")
+            playagain(player_name)
+
+
+        if computer_score == 6:
+            print(f"You are the loser, {player_name}..")
+            playagain(player_name)
+
+        
+               
+    
+
 
 play_game()
+
