@@ -20,7 +20,7 @@ def playagain(player_name):
             if decision == "y":
                 play_game()
             elif decision == "n":
-                print(f"Come again sometime, {player_name}!")
+                print(f"Play again sometime, {player_name}!")
             else:
                 print("Invalid decision.")
                 decision = input("Type y or n: ").lower()
@@ -76,7 +76,5 @@ def play_game():
         
                
     
-
-
 play_game()
 
