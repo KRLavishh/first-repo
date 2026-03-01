@@ -11,17 +11,17 @@ A best-of-ten built in both Java and Python. First to 6 wins takes the match.
 ## How to Run
 
 **Python:**
-```
+```bash
 python3 rps.py
 ```
 
 
 **Java:**
-```
+```bash
 javac rps.java
 java rps
 ```
-```
+
 
 ## Technologies
 - Python
